@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twitter Clone</title>
+    <title>Twitter Clone - Dark Mode</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
         <!-- Sidebar -->
         <aside class="sidebar">
-            <img src="logo.png" alt="Twitter Logo" class="logo">
+            <img src="pictures/Screenshot 2025-01-12 115810.png" alt="Twitter Logo" class="logo">
             <ul>
-                <li>Home</li>
-                <li>Explore</li>
-                <li>Notifications</li>
-                <li>Messages</li>
-                <li>Bookmarks</li>
-                <li>Profile</li>
+                <li><i class="fas fa-home"></i> Home</li>
+                <li><i class="fas fa-hashtag"></i> Explore</li>
+                <li><i class="far fa-bell"></i> Notifications</li>
+                <li><i class="far fa-envelope"></i> Messages</li>
+                <li><i class="far fa-bookmark"></i> Bookmarks</li>
+                <li><i class="far fa-user"></i> Profile</li>
             </ul>
             <button class="tweet-btn">Tweet</button>
         </aside>
@@ -25,30 +26,53 @@
         <!-- Feed Section -->
         <main class="feed">
             <div class="tweet-box">
+                <img src="pictures/IMG-20241231-WA0018.jpg" alt="Profile Picture" class="profile-pic">
                 <input type="text" placeholder="What's happening?">
                 <button class="tweet-btn">Tweet</button>
             </div>
 
             <!-- Example Post -->
             <div class="post">
-                <img src="profile.jpg" alt="User Profile" class="profile-pic">
+                <img src="pictures/IMG-20241227-WA0128.jpg" alt="User Profile" class="profile-pic">
                 <div class="post-content">
-                    <h3>Akash Chavda <span>@sky_chavda</span></h3>
-                    <p>React Interview is Not Just Question & Answer...</p>
+                    <h3>Bonae Ineza <span>@bonzo_123 • 4h</span></h3>
+                    <p>React Interview is Not Just Question & Answer... 
+                        It Includes Coding Questions As Well.</p>
+                    <img src="pictures/IMG-20250110-WA0002.jpg" alt="Post Image" class="post-image">
                 </div>
             </div>
         </main>
 
         <!-- Trending Section -->
         <aside class="trending">
+            <div class="search-bar">
+                <input type="text" placeholder="Search Twitter">
+            </div>
             <h3>Trends for you</h3>
             <ul>
-                <li>#ReactJS</li>
-                <li>#Uganda</li>
-                <li>#Money</li>
-                <li>#Kagame</li>
+                <li>
+                    <p class="trend-category">Technology · Trending</p>
+                    <p class="trend-title">#reactjs</p>
+                    <p class="trend-tweets">1,809 Tweets</p>
+                </li>
+                <li>
+                    <p class="trend-category">Politics · Trending</p>
+                    <p class="trend-title">Uganda</p>
+                    <p class="trend-tweets">35.4K Tweets</p>
+                </li>
+                <li>
+                    <p class="trend-category">Trending in Rwanda</p>
+                    <p class="trend-title">Money</p>
+                    <p class="trend-tweets">1.21M Tweets</p>
+                </li>
+                <li>
+                    <p class="trend-category">Trending in Rwanda</p>
+                    <p class="trend-title">Kagame</p>
+                    <p class="trend-tweets">2,731 Tweets</p>
+                </li>
             </ul>
+            <p class="show-more">Show more</p>
         </aside>
     </div>
 </body>
-</html
+</html>
