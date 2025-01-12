@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twitter Clone - Dark Mode</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
         <!-- Sidebar -->
         <aside class="sidebar">
-            <img src="pictures/Screenshot 2025-01-12 115810.png" alt="Twitter Logo" class="logo">
+            <img src="pictures/[CITYPNG.COM]HD White Twitter Bird Logo Icon PNG - 3000x3000.png" alt="Twitter Logo" class="logo">
             <ul>
                 <li><i class="fas fa-home"></i> Home</li>
                 <li><i class="fas fa-hashtag"></i> Explore</li>
@@ -19,16 +20,32 @@
                 <li><i class="far fa-envelope"></i> Messages</li>
                 <li><i class="far fa-bookmark"></i> Bookmarks</li>
                 <li><i class="far fa-user"></i> Profile</li>
+                <li><i class="far fa-ellipsis-h"></i> More</li>
             </ul>
             <button class="tweet-btn">Tweet</button>
         </aside>
 
         <!-- Feed Section -->
         <main class="feed">
-            <div class="tweet-box">
-                <img src="pictures/IMG-20241231-WA0018.jpg" alt="Profile Picture" class="profile-pic">
-                <input type="text" placeholder="What's happening?">
-                <button class="tweet-btn">Tweet</button>
+            <h3>Home</h3>
+            <div class="tweet-container">
+                <div class="profile-pic">
+                    <img src="pictures/IMG-20241227-WA0128.jpg" alt="Profile Picture">
+                </div>
+                <div class="tweet-input-section">
+                    <textarea placeholder="What's happening?"></textarea>
+                    <div class="tweet-actions">
+                        <div class="icons">
+                            <i class="fas fa-image"></i>
+                            <i class="fas fa-file-video"></i>
+                            <i class="fas fa-bar-chart"></i>
+                            <i class="fas fa-smile"></i>
+                            <i class="fas fa-calendar-alt"></i>
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <button class="tweet-button">Tweet</button>
+                    </div>
+                </div>
             </div>
 
             <!-- Example Post -->
