@@ -1,34 +1,40 @@
 /* General Reset */
-body {
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #000;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 /* Container Setup */
 .container {
-    display: flex;
-    max-width: 1200px;
-    width: 100%;
-    justify-content: space-between;
-    padding: 10px;
+    display: grid; /* Change from flex to grid */
+    grid-template-columns:275px minmax(600px, auto) 350px; /* Exact Twitter column widths */
+    max-width: 1265px; /* Twitter's max width */
+    margin: 0 auto;
+    padding: 0 16px; /* Remove padding */
+    gap: 0; 
+    min-height: 100vh;
 }
 
 /* Sidebar Styling */
 .sidebar {
-    width: 20%;
-    padding: 10px;
-    border-right: 1px solid #2f3336;
+    width: 50%;
+    padding: 0 12px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
 }
 
 .sidebar .logo {
-    width: 50px;
-    margin-bottom: 20px;
+    width: 30px;
+    margin: 12px;
+    fill: white;
 }
 
 .sidebar ul {
@@ -37,45 +43,52 @@ body {
 }
 
 .sidebar ul li {
-    padding: 10px 0;
-    font-size: 18px;
+    padding: 12px;
+    margin: 4px 0;
+    border-radius: 9999px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
     cursor: pointer;
+    transition: background-color 0.2s;;
 }
 
 .sidebar ul li i {
     margin-right: 10px;
 }
 
+.sidebar-nav li:hover {
+    background-color: rgba(239, 243, 244, 0.1);
+}
+
 .tweet-btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #1d9bf0;
+    background-color: rgb(29, 155, 240);
     color: white;
     border: none;
-    border-radius: 20px;
+    border-radius: 9999px;
+    padding: 16px 32px;
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: 16px;
+    width: 90%;
     cursor: pointer;
-    font-size: 16px;
-    margin-top: 20px;
 }
 
 /* Feed Section Styling */
 
 /* Input section */
-
 .tweet-input-section {
     flex: 1; /* Allows the section to take up remaining space */
 }
 .tweet-input-section textarea {
-    width: 70%;
-    background-color: transparent;
-    color: white;
+    width: 100%;
+    background: transparent;
     border: none;
-    outline: none;
-    font-size: 14px;
-    resize: none;
-    margin-bottom: 10px;
-    padding: 10px 0;
-    font-family: 'Arial', sans-serif;
+    color: rgb(231, 233, 234);
+    font-size: 20px;
+    padding: 12px 0;
+    margin-bottom: 12px;
 }
 
 /* Icons container */
@@ -100,18 +113,58 @@ body {
 .icons i:hover {
     color: #0d8de3; /* Slightly darker blue on hover */
 }
-
+.feed {
+    border-right: 1px solid #2f3336;
+    border-left: 1px solid #2f3336;
+    min-width: 600px;
+}
+.feed-header {
+    padding: 16px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid rgb(47, 51, 54);
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(12px);
+    z-index: 10;
+}
+/* Add header styling */
+.feed h3 {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 16px;
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #2f3336;
+    margin: 0;
+}
 /* Tweet button */
+
+.tweet-container {
+    padding: 16px;
+    border-bottom: 1px solid rgb(47, 51, 54);
+    display: flex;
+    gap: 12px;
+}
+
+.compose-tweet {
+    padding: 16px;
+    border-bottom: 1px solid rgb(47, 51, 54);
+    display: flex;
+    gap: 12px;
+}
+
 .tweet-button {
-    background-color: #1DA1F2; /* Twitter blue */
+    background-color: rgb(29, 155, 240);
     color: white;
     border: none;
-    border-radius: 20px;
-    padding: 10px 20px;
-    font-size: 14px;
+    border-radius: 9999px;
+    padding: 8px 16px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.2s ease;
 }
 
 .tweet-button:hover {
@@ -122,23 +175,30 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .post {
-    display: flex;
-    gap: 10px;
-    padding: 10px 0;
-    border-bottom: 1px solid #2f3336;
+    padding: 12px 16px;
+    border-bottom: 1px solid rgb(47, 51, 54);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.post:hover {
+    background-color: rgba(255, 255, 255, 0.03);
 }
 
 .post-content h3 {
     font-size: 16px;
     margin: 0;
+    color: rgb(231, 233, 234);
 }
 
 .post-content span {
-    font-size: 14px;
-    color: #71767b;
+    color: rgb(113, 118, 123);
+    font-weight: 400;
+    margin-left: 4px;
 }
 
 .post-image {
@@ -148,20 +208,37 @@ body {
 }
 
 /* Trending Section */
-.trending {
-    width: 30%;
-    padding: 20px;
+.right-sidebar {
+    padding: 0 16px;
 }
 
+.trending {
+    width: 350px; /* Fixed width */
+    padding: 0 16px; /* Adjust padding */
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+.search-container {
+    position: sticky;
+    top: 0;
+    padding: 6px 0;
+    background-color: black;
+    z-index: 10;
+}
 .search-bar input {
     width: 100%;
-    padding: 10px;
-    border-radius: 20px;
-    border: none;
-    background-color: #202327;
-    color: white;
-    font-size: 16px;
-    margin-bottom: 20px;
+    background-color: rgb(32, 35, 39);
+    border: 1px solid transparent;
+    border-radius: 9999px;
+    padding: 12px;
+    color: rgb(231, 233, 234);
+    font-size: 15px;
+}
+
+.search-bar input:focus {
+    background-color: black;
+    border-color: rgb(29, 155, 240);
     outline: none;
 }
 
@@ -171,15 +248,17 @@ body {
 }
 
 .trending ul {
-    list-style: none;
-    padding: 0;
+    background-color: rgb(32, 35, 39);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-top: 16px;
 }
 
 .trending ul li {
-    padding: 10px 0;
     border-bottom: 1px solid #2f3336;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background-color 0.2s;
+    padding: 12px 16px;
 }
 
 .trending ul li:hover {
@@ -208,16 +287,7 @@ body {
     margin-top: 20px;
 }
 /* Container for the tweet section */
-.tweet-container {
-    display: flex;
-    align-items: flex-start;
-    padding: 15px;
-    background-color: #1c1e21; /* Dark background */
-    border-radius: 10px;
-    width: 500px; /* Adjust width as needed */
-    margin: 20px auto;
-    color: white;
-}
+
 
 /* Profile picture */
 .profile-pic img {
